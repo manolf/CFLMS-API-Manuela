@@ -1,0 +1,99 @@
+/*fixed for article - in vw too small*/
+* {
+  margin: 0;
+  font: Arial, sans-serif; }
+
+header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #59181A;
+  align-items: center;
+  padding: 2vw 0; }
+
+nav {
+  background-color: black; }
+  nav ul {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    align-items: flex-start; }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8vw;
+    padding-right: 1.5vw; }
+
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+div .art {
+  width: 730px;
+  padding: 0.5vw 0.5vw;
+  margin: 0.5vw 0;
+  background-color: lightgrey; }
+
+.art .image {
+  width: 730px;
+  height: 490px; }
+
+.art p {
+  font-size: 14pt; }
+
+footer {
+  background-color: black;
+  height: 14vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  footer ul {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    align-items: flex-start; }
+  footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8vw;
+    padding-right: 1.5vw; }
+  footer p {
+    font-size: 2vw;
+    color: white; }
+  footer #logo2 {
+    align-self: center;
+    order: 1; }
+  footer #name {
+    align-self: flex-end; }
+
+@media screen and (max-width: 480px) {
+  /*header and nav adaptions like in the html.index example*/
+  header {
+    justify-content: flex-start;
+    padding-left: 2vw; }
+    header #banner1 {
+      display: none; }
+
+  div .art {
+    width: 370px; }
+
+  .art .image {
+    width: 370px;
+    height: 246px; }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    footer p {
+      font-size: 2vw;
+      color: white; }
+    footer #navbar {
+      align-self: center; }
+    footer #logo2 {
+      align-self: center; }
+    footer #name {
+      order: 2;
+      align-self: center; } }
+
+/*# sourceMappingURL=article.css.map */

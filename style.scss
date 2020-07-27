@@ -1,0 +1,423 @@
+$fontstyle: Arial,sans-serif;
+$fontsize_p: 1.3vw;
+$fontsize_a: 1.8vw;
+$fontsize_bigger: 2vw;
+$heading: 2.2vw;
+
+/*
+nesting was getting difficult
+nested sections: header, nav and footer
+*/
+
+*{
+	margin:0;
+	font: $fontstyle;
+}
+
+
+
+header{
+	display: flex;
+	justify-content: space-around;
+	background-color: #59181A;
+	align-items: center;
+	padding: 2vw 0;
+
+}
+
+nav {
+	background-color: black;
+
+ul{
+	display:flex;
+	justify-content: left;
+	list-style-type: none;
+	align-items: flex-start;
+}
+	
+a{
+	text-decoration: none;
+	color: white;
+	font-size: $fontsize_a;
+	padding-right: 1.5vw;
+}
+}
+
+
+.news{
+	background-color: lightgrey; 
+	margin: 1vw;
+	color: black;
+}
+
+.news h2{
+	font-size: $heading;
+}
+
+/*trying to get rid of underline "Popular" */
+.news a{
+	text-decoration: none;
+}
+
+#wrapper{
+	margin: 1vw;
+	#date{
+		display:flex;
+		justify-content: flex-end;
+	}
+}
+
+#bodycontainer1{
+	display:flex;
+	flex-flow: row;
+}
+
+div #cleft1{
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width:90%;
+}
+
+div .sec1{
+	/*width: 90%;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.article{
+	background-color: black;
+	text-align: left;
+	margin: 1vw;
+
+}
+
+.article p{
+	text-align: left;
+}
+
+.article a{
+	text-decoration: none;
+}
+
+.sec1 .article{
+	width:296px;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	overflow:hidden;
+}
+
+.sec1 .article p{
+	font-size: $fontsize_p;
+	color: white;
+	
+}
+
+/*why is here h2 reacting like a link?!*/
+div .sec2{
+	width: 100%;
+}
+
+div .sec3{
+	/*width: 90%;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.sec3 .article{
+	width:296px;
+	display: flex;
+	flex-flow: column;
+	overflow: hidden;
+}
+
+.sec3 .article p{
+	font-size: $fontsize_p;
+	color: white;	
+}
+
+
+div #cright1{
+	width: 10%;
+	margin: 1vw;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+#banner2{
+	width:120px;
+	height:100%;
+
+}
+
+div #banner3{
+	width: 90%;
+	display:flex;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#banner3{
+	width:100%;
+}
+
+
+#bodycontainer2{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+}
+
+div #cleft2{
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+
+#cleft2 .article{
+	display:flex;
+	flex-flow: column;
+	justify-content:space-between;
+	width: 461px;
+	overflow: hidden;
+}
+
+#cleft2 .article p{
+	font-size: $fontsize_bigger;
+	color: white;
+	
+}
+
+
+div #cright2{
+	width:10%;
+	margin: 1vw;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+
+#banner4{
+	width:120px;
+	height:100%;
+
+}
+
+
+.images{
+	width:461px;
+	height: 308px;
+}
+
+.images2{
+	width:296px;
+	height:198px;
+
+}
+
+
+footer{
+	background-color: black;
+	height: 14vw;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	ul{
+		display:flex;
+		justify-content: left;
+		list-style-type: none;
+		align-items: flex-start;
+	}
+		
+	a{
+		text-decoration: none;
+		color: white;
+		font-size: $fontsize_a;
+		padding-right: 1.5vw;
+	}
+
+	p{
+		font-size: $fontsize_bigger;
+		color: white;
+	}
+
+	#logo2{
+		align-self: center;
+		order: 1;
+	}
+
+	#name{
+		align-self: flex-end;
+	}
+}
+
+@media screen and (max-width: 480px) {
+/*here was intended to do following adaptions
+1) no display of the banner1 and banner4 (worked)
+2) no display of the banner3 (did not work)
+3) rearrangement of header (worked)
+4) rearrangement of footer (worked)
+5) I was trying to wrap/resizing the container and the pictures:
+	trying to make them smaller somehow worked..
+	my total fail: to get the banner FSWD into position
+	here I ran out of time..;
+
+*/
+
+/* just for testing*/
+
+body {
+
+        background-color: lime;
+
+    }
+
+ 
+
+    header{
+    	justify-content: flex-start;
+    	padding-left: 2vw;
+    }
+
+    #bodycontainer1{
+		display:flex;
+		flex-flow: column;
+		flex-wrap: wrap;
+}
+	div #cright1{
+		display:flex;
+		width:210px;
+		height:150px;
+	}
+
+
+
+    #banner1{
+    	display: none;
+    }
+
+	/*dont know why it is not working :-( */
+    #banner3{
+    	display: none;
+    }
+
+    #banner4{
+    	display:none;
+    }
+
+    .images{
+	width:210px;
+	height:140px;
+}
+
+.images2{
+	width:210px;
+	height:140px;
+
+}
+
+
+.sec1 .article{
+	width:210px;
+	}
+
+#cleft2 .article{
+	width:210px;
+}
+
+.sec3 .article{
+	width:210px;
+}
+
+footer{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+footer  p{
+	font-size: 2vw;
+	color: white;
+}
+
+footer #navbar{
+	align-self: center;
+}
+
+footer #logo2{
+	align-self: center;
+
+}
+
+footer #name{
+order:2;
+align-self: center;
+}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+
+/*for this Version (intention was here tablet)
+following adaptions:
+
+- rearrangement of footer
+*/
+
+body{
+	background-color: red;
+}
+
+
+footer{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+footer  p{
+	font-size: 2vw;
+	color: white;
+}
+
+footer #navbar{
+	align-self: center;
+}
+
+footer #logo2{
+	align-self: center;
+
+}
+
+footer #name{
+order:2;
+align-self: center;
+}
+
+}
+
+@media screen and (min-width:1201px) {
+ /*   just for testing
+ actually the nicest resolution:
+ 1680 x 1050
+ ;
+*/
+ body {
+        background-color: darksalmon;
+    }
+}
+
+
+
+
+

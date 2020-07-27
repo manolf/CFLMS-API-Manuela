@@ -1,0 +1,148 @@
+$fontstyle: Arial,sans-serif;
+$fontsize_p: 14pt; /*fixed for article - in vw too small*/
+$fontsize_a: 1.8vw;
+$fontsize_bigger: 2vw;
+$heading: 2.2vw;
+
+*{
+	margin:0;
+	font: $fontstyle;
+}
+
+header{
+	display: flex;
+	justify-content: space-around;
+	background-color: #59181A;
+	align-items: center;
+	padding: 2vw 0;
+
+}
+
+nav {
+	background-color: black;
+
+ul{
+	display:flex;
+	justify-content: left;
+	list-style-type: none;
+	align-items: flex-start;
+}
+	
+a{
+	text-decoration: none;
+	color: white;
+	font-size: $fontsize_a;
+	padding-right: 1.5vw;
+}
+}
+
+#wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div .art{
+	width: 730px;
+	padding: 0.5vw 0.5vw;
+	margin: 0.5vw 0;
+	background-color: lightgrey;
+
+}
+
+.art .image{
+		width:730px;
+		height:490px;
+
+	}
+
+.art p{
+	font-size: $fontsize_p;
+}
+
+
+footer{
+	background-color: black;
+	height: 14vw;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	ul{
+		display:flex;
+		justify-content: left;
+		list-style-type: none;
+		align-items: flex-start;
+	}
+		
+	a{
+		text-decoration: none;
+		color: white;
+		font-size: $fontsize_a;
+		padding-right: 1.5vw;
+	}
+
+	p{
+		font-size: $fontsize_bigger;
+		color: white;
+	}
+
+	#logo2{
+		align-self: center;
+		order: 1;
+	}
+
+	#name{
+		align-self: flex-end;
+	}
+}
+
+@media screen and (max-width: 480px) {
+/*header and nav adaptions like in the html.index example*/
+
+    header{
+    	justify-content: flex-start;
+    	padding-left: 2vw;
+    	#banner1{
+    	display: none;
+    	}
+    }
+
+
+	div .art{
+		width: 370px;
+	}
+
+	.art .image{
+		width:370px;
+		height:246px;
+
+	}
+
+
+    footer{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		p{
+			font-size: 2vw;
+			color: white;
+			}
+		#navbar{
+		align-self: center;
+		}
+		#logo2{
+		align-self: center;
+		}
+		#name{
+		order:2;
+		align-self: center;
+		}
+	}
+	
+}
+ 
+
+
+
+ 
+
